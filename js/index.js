@@ -153,48 +153,68 @@ window.addEventListener('click', (event) => {
 //9/copy
 const paragraphsCopyWarning = document.querySelectorAll('p')
 paragraphsCopyWarning[0].addEventListener('copy', (event) => {
-    alert(`This paragraph has a copyright. You can not copy it!`)
+    alert(`This paragraph has a copyright. You can not copy it!`);
 })
 paragraphsCopyWarning[1].addEventListener('copy', (event) => {
-    alert(`This paragraph has a copyright. You can not copy it!`)
+    alert(`This paragraph has a copyright. You can not copy it!`);
 })
 paragraphsCopyWarning[2].addEventListener('copy', (event) => {
-    alert(`This paragraph has a copyright. You can not copy it!`)
+    alert(`This paragraph has a copyright. You can not copy it!`);
 })
 paragraphsCopyWarning[3].addEventListener('copy', (event) => {
-    alert(`This paragraph has a copyright. You can not copy it!`)
+    alert(`This paragraph has a copyright. You can not copy it!`);
 })
 paragraphsCopyWarning[4].addEventListener('copy', (event) => {
-    alert(`This paragraph has a copyright. You can not copy it!`)
+    alert(`This paragraph has a copyright. You can not copy it!`);
 })
 paragraphsCopyWarning[5].addEventListener('copy', (event) => {
-    alert(`This paragraph has a copyright. You can not copy it!`)
+    alert(`This paragraph has a copyright. You can not copy it!`);
 })
 paragraphsCopyWarning[6].addEventListener('copy', (event) => {
-    alert(`This paragraph has a copyright. You can not copy it!`)
+    alert(`This paragraph has a copyright. You can not copy it!`);
 })
 paragraphsCopyWarning[7].addEventListener('copy', (event) => {
-    alert(`This paragraph has a copyright. You can not copy it!`)
+    alert(`This paragraph has a copyright. You can not copy it!`);
 })
 paragraphsCopyWarning[8].addEventListener('copy', (event) => {
-    alert(`This paragraph has a copyright. You can not copy it!`)
+    alert(`This paragraph has a copyright. You can not copy it!`);
 })
 paragraphsCopyWarning[9].addEventListener('copy', (event) => {
-    alert(`This paragraph has a copyright. You can not copy it!`)
+    alert(`This paragraph has a copyright. You can not copy it!`);
 })
 
 
-//10/dblclick
+//10/dblclick // preventDefault()
 const navLinksError = document.querySelectorAll('a')
 navLinksError[0].addEventListener('dblclick', (event) => {
     alert(`We appologize, we are currently having some technical difficulties and working to resolve it ASAP!`)
+    event.preventDefault();
 })
 navLinksError[1].addEventListener('dblclick', (event) => {
     alert(`We appologize, we are currently having some technical difficulties and working to resolve it ASAP!`)
+    event.preventDefault();
 })
 navLinksError[2].addEventListener('dblclick', (event) => {
     alert(`We appologize, we are currently having some technical difficulties and working to resolve it ASAP!`)
+    event.preventDefault();
 })
 navLinksError[3].addEventListener('dblclick', (event) => {
     alert(`We appologize, we are currently having some technical difficulties and working to resolve it ASAP!`)
+    event.preventDefault();
 })
+
+//even propagation
+
+const paragraph1 = document.querySelector('.content-pick')
+paragraph1[0].addEventListener('click', (event) => {
+    console.log(`First Paragraph`)
+})
+const paragraph2 = document.querySelector('.content-pick')
+paragraph1[1].addEventListener('click', (event) => {
+    console.log(`Second Paragraph`)
+    event.stopPropagation()
+})
+
+//prevent default
+
+
